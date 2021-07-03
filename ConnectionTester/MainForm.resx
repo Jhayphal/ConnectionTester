@@ -1,0 +1,1248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxDontFragment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBoxDontFragment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 89</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBoxDontFragment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="checkBoxDontFragment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="checkBoxDontFragment.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="checkBoxDontFragment.Text" xml:space="preserve">
+    <value>Не фрагментировать</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDontFragment.Name" xml:space="preserve">
+    <value>checkBoxDontFragment</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDontFragment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDontFragment.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDontFragment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDownTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 66</value>
+  </data>
+  <data name="numericUpDownTTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numericUpDownTTL.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownTTL.Name" xml:space="preserve">
+    <value>numericUpDownTTL</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownTTL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownTTL.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownTTL.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelTTL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 67</value>
+  </data>
+  <data name="labelTTL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelTTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 13</value>
+  </data>
+  <data name="labelTTL.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelTTL.Text" xml:space="preserve">
+    <value>Время жизни/Time to live (мс):</value>
+  </data>
+  <data name="&gt;&gt;labelTTL.Name" xml:space="preserve">
+    <value>labelTTL</value>
+  </data>
+  <data name="&gt;&gt;labelTTL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTTL.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;labelTTL.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDownPingTimeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 41</value>
+  </data>
+  <data name="numericUpDownPingTimeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numericUpDownPingTimeout.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownPingTimeout.Name" xml:space="preserve">
+    <value>numericUpDownPingTimeout</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownPingTimeout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownPingTimeout.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownPingTimeout.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelNetworkFrequency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelNetworkFrequency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="labelNetworkFrequency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 13</value>
+  </data>
+  <data name="labelNetworkFrequency.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelNetworkFrequency.Text" xml:space="preserve">
+    <value>Время ожидания ответа (мс):</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkFrequency.Name" xml:space="preserve">
+    <value>labelNetworkFrequency</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkFrequency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkFrequency.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkFrequency.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelHostOrIP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHostOrIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="labelHostOrIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="labelHostOrIP.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelHostOrIP.Text" xml:space="preserve">
+    <value>Хост или IP-адрес:</value>
+  </data>
+  <data name="&gt;&gt;labelHostOrIP.Name" xml:space="preserve">
+    <value>labelHostOrIP</value>
+  </data>
+  <data name="&gt;&gt;labelHostOrIP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHostOrIP.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;labelHostOrIP.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxHostOrIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 17</value>
+  </data>
+  <data name="textBoxHostOrIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxHostOrIP.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxHostOrIP.Name" xml:space="preserve">
+    <value>textBoxHostOrIP</value>
+  </data>
+  <data name="&gt;&gt;textBoxHostOrIP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxHostOrIP.Parent" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;textBoxHostOrIP.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBoxNetwork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="groupBoxNetwork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 121</value>
+  </data>
+  <data name="groupBoxNetwork.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetwork.Name" xml:space="preserve">
+    <value>groupBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetwork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetwork.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetwork.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="checkBoxNetwork.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxNetwork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="checkBoxNetwork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 17</value>
+  </data>
+  <data name="checkBoxNetwork.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxNetwork.Text" xml:space="preserve">
+    <value>Сетевое соединение (Ping)</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetwork.Name" xml:space="preserve">
+    <value>checkBoxNetwork</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetwork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetwork.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetwork.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonRunStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 323</value>
+  </data>
+  <data name="buttonRunStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 23</value>
+  </data>
+  <data name="buttonRunStop.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonRunStop.Text" xml:space="preserve">
+    <value>Запустить тестирование</value>
+  </data>
+  <data name="&gt;&gt;buttonRunStop.Name" xml:space="preserve">
+    <value>buttonRunStop</value>
+  </data>
+  <data name="&gt;&gt;buttonRunStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRunStop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRunStop.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="checkBoxNetworkLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxNetworkLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxNetworkLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 163</value>
+  </data>
+  <data name="checkBoxNetworkLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 17</value>
+  </data>
+  <data name="checkBoxNetworkLink.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBoxNetworkLink.Text" xml:space="preserve">
+    <value>Сетевой ярлык</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetworkLink.Name" xml:space="preserve">
+    <value>checkBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetworkLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetworkLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxNetworkLink.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttonLinkFileName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 42</value>
+  </data>
+  <data name="buttonLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="buttonLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
+  </data>
+  <data name="buttonLinkFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="buttonLinkFileName.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;buttonLinkFileName.Name" xml:space="preserve">
+    <value>buttonLinkFileName</value>
+  </data>
+  <data name="&gt;&gt;buttonLinkFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLinkFileName.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;buttonLinkFileName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelLinkFileName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="labelLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
+  </data>
+  <data name="labelLinkFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelLinkFileName.Text" xml:space="preserve">
+    <value>Файл для чтения:</value>
+  </data>
+  <data name="&gt;&gt;labelLinkFileName.Name" xml:space="preserve">
+    <value>labelLinkFileName</value>
+  </data>
+  <data name="&gt;&gt;labelLinkFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLinkFileName.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;labelLinkFileName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 42</value>
+  </data>
+  <data name="textBoxLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="textBoxLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 20</value>
+  </data>
+  <data name="textBoxLinkFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBoxLinkFileName.Name" xml:space="preserve">
+    <value>textBoxLinkFileName</value>
+  </data>
+  <data name="&gt;&gt;textBoxLinkFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLinkFileName.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;textBoxLinkFileName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDownNetworkLinkFrequency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 19</value>
+  </data>
+  <data name="numericUpDownNetworkLinkFrequency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numericUpDownNetworkLinkFrequency.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNetworkLinkFrequency.Name" xml:space="preserve">
+    <value>numericUpDownNetworkLinkFrequency</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNetworkLinkFrequency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNetworkLinkFrequency.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownNetworkLinkFrequency.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.Text" xml:space="preserve">
+    <value>Частота запросов (мс):</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkLinkFrequency.Name" xml:space="preserve">
+    <value>labelNetworkLinkFrequency</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkLinkFrequency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkLinkFrequency.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;labelNetworkLinkFrequency.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBoxNetworkLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 180</value>
+  </data>
+  <data name="groupBoxNetworkLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 80</value>
+  </data>
+  <data name="groupBoxNetworkLink.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetworkLink.Name" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetworkLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetworkLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxNetworkLink.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="checkBoxSqlServer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxSqlServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 163</value>
+  </data>
+  <data name="checkBoxSqlServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 17</value>
+  </data>
+  <data name="checkBoxSqlServer.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBoxSqlServer.Text" xml:space="preserve">
+    <value>Доступность SQL-сервера</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSqlServer.Name" xml:space="preserve">
+    <value>checkBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSqlServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSqlServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxSqlServer.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="numericUpDownSqlServerFrequency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 123</value>
+  </data>
+  <data name="numericUpDownSqlServerFrequency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numericUpDownSqlServerFrequency.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownSqlServerFrequency.Name" xml:space="preserve">
+    <value>numericUpDownSqlServerFrequency</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownSqlServerFrequency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownSqlServerFrequency.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownSqlServerFrequency.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelSqlServerFrequency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSqlServerFrequency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelSqlServerFrequency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 125</value>
+  </data>
+  <data name="labelSqlServerFrequency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
+  </data>
+  <data name="labelSqlServerFrequency.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelSqlServerFrequency.Text" xml:space="preserve">
+    <value>Частота запросов (мс):</value>
+  </data>
+  <data name="&gt;&gt;labelSqlServerFrequency.Name" xml:space="preserve">
+    <value>labelSqlServerFrequency</value>
+  </data>
+  <data name="&gt;&gt;labelSqlServerFrequency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSqlServerFrequency.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;labelSqlServerFrequency.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelDatabase.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDatabase.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 100</value>
+  </data>
+  <data name="labelDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labelDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelDatabase.Text" xml:space="preserve">
+    <value>База данных:</value>
+  </data>
+  <data name="&gt;&gt;labelDatabase.Name" xml:space="preserve">
+    <value>labelDatabase</value>
+  </data>
+  <data name="&gt;&gt;labelDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDatabase.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;labelDatabase.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBoxDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 97</value>
+  </data>
+  <data name="textBoxDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;textBoxDatabase.Name" xml:space="preserve">
+    <value>textBoxDatabase</value>
+  </data>
+  <data name="&gt;&gt;textBoxDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxDatabase.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;textBoxDatabase.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 74</value>
+  </data>
+  <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelPassword.Text" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Name" xml:space="preserve">
+    <value>labelPassword</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBoxPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 71</value>
+  </data>
+  <data name="textBoxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBoxPassword.Name" xml:space="preserve">
+    <value>textBoxPassword</value>
+  </data>
+  <data name="&gt;&gt;textBoxPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxPassword.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;textBoxPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 45</value>
+  </data>
+  <data name="textBoxLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogin.Name" xml:space="preserve">
+    <value>textBoxLogin</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogin.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogin.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelLogin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="labelLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="labelLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelLogin.Text" xml:space="preserve">
+    <value>Логин:</value>
+  </data>
+  <data name="&gt;&gt;labelLogin.Name" xml:space="preserve">
+    <value>labelLogin</value>
+  </data>
+  <data name="&gt;&gt;labelLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLogin.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;labelLogin.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelServerAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelServerAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="labelServerAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="labelServerAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelServerAddress.Text" xml:space="preserve">
+    <value>Адрес сервера:</value>
+  </data>
+  <data name="&gt;&gt;labelServerAddress.Name" xml:space="preserve">
+    <value>labelServerAddress</value>
+  </data>
+  <data name="&gt;&gt;labelServerAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelServerAddress.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;labelServerAddress.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBoxServerAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 19</value>
+  </data>
+  <data name="textBoxServerAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxServerAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;textBoxServerAddress.Name" xml:space="preserve">
+    <value>textBoxServerAddress</value>
+  </data>
+  <data name="&gt;&gt;textBoxServerAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxServerAddress.Parent" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;textBoxServerAddress.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupBoxSqlServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 180</value>
+  </data>
+  <data name="groupBoxSqlServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 165</value>
+  </data>
+  <data name="groupBoxSqlServer.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSqlServer.Name" xml:space="preserve">
+    <value>groupBoxSqlServer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSqlServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSqlServer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSqlServer.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="listBoxLog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt</value>
+  </data>
+  <data name="listBoxLog.HorizontalScrollbar" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="listBoxLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 358</value>
+  </data>
+  <data name="listBoxLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>868, 223</value>
+  </data>
+  <data name="listBoxLog.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;listBoxLog.Name" xml:space="preserve">
+    <value>listBoxLog</value>
+  </data>
+  <data name="&gt;&gt;listBoxLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBoxLog.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listBoxLog.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="toolTipTTL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolTipDontFragment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>145, 17</value>
+  </metadata>
+  <data name="labelLogFileName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelLogFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 279</value>
+  </data>
+  <data name="labelLogFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelLogFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="labelLogFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelLogFileName.Text" xml:space="preserve">
+    <value>Журнал:</value>
+  </data>
+  <data name="&gt;&gt;labelLogFileName.Name" xml:space="preserve">
+    <value>labelLogFileName</value>
+  </data>
+  <data name="&gt;&gt;labelLogFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLogFileName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelLogFileName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="saveFileDialogLog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>349, 17</value>
+  </metadata>
+  <data name="saveFileDialogLog.Filter" xml:space="preserve">
+    <value>Text files (*.txt)|*.txt|All files (*.*)|*.*</value>
+  </data>
+  <data name="saveFileDialogLog.Title" xml:space="preserve">
+    <value>Записывать отчет в файл...</value>
+  </data>
+  <metadata name="openFileDialogNetworkLink.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>528, 17</value>
+  </metadata>
+  <data name="openFileDialogNetworkLink.Filter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="openFileDialogNetworkLink.Title" xml:space="preserve">
+    <value>Использовать этот файл для чтения...</value>
+  </data>
+  <data name="textBoxLogFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 276</value>
+  </data>
+  <data name="textBoxLogFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="textBoxLogFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 20</value>
+  </data>
+  <data name="textBoxLogFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="textBoxLogFileName.Text" xml:space="preserve">
+    <value>log.txt</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogFileName.Name" xml:space="preserve">
+    <value>textBoxLogFileName</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogFileName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxLogFileName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonSetLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>842, 276</value>
+  </data>
+  <data name="buttonSetLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="buttonSetLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
+  </data>
+  <data name="buttonSetLogFile.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonSetLogFile.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;buttonSetLogFile.Name" xml:space="preserve">
+    <value>buttonSetLogFile</value>
+  </data>
+  <data name="&gt;&gt;buttonSetLogFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSetLogFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSetLogFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxFileStream.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxFileStream.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxFileStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 12</value>
+  </data>
+  <data name="checkBoxFileStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
+  </data>
+  <data name="checkBoxFileStream.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkBoxFileStream.Text" xml:space="preserve">
+    <value>Сетевое соединение (FileStream)</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFileStream.Name" xml:space="preserve">
+    <value>checkBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFileStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFileStream.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFileStream.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonClient.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonClient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 22</value>
+  </data>
+  <data name="radioButtonClient.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="radioButtonClient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="radioButtonClient.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="radioButtonClient.Text" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="&gt;&gt;radioButtonClient.Name" xml:space="preserve">
+    <value>radioButtonClient</value>
+  </data>
+  <data name="&gt;&gt;radioButtonClient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonClient.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;radioButtonClient.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonServer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonServer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="radioButtonServer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="radioButtonServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
+  </data>
+  <data name="radioButtonServer.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="radioButtonServer.Text" xml:space="preserve">
+    <value>Сервер</value>
+  </data>
+  <data name="&gt;&gt;radioButtonServer.Name" xml:space="preserve">
+    <value>radioButtonServer</value>
+  </data>
+  <data name="&gt;&gt;radioButtonServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonServer.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;radioButtonServer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDownFileStreamPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 90</value>
+  </data>
+  <data name="numericUpDownFileStreamPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="numericUpDownFileStreamPort.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFileStreamPort.Name" xml:space="preserve">
+    <value>numericUpDownFileStreamPort</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFileStreamPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFileStreamPort.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFileStreamPort.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelFileStreamPort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFileStreamPort.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFileStreamPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 89</value>
+  </data>
+  <data name="labelFileStreamPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="labelFileStreamPort.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelFileStreamPort.Text" xml:space="preserve">
+    <value>Порт:</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamPort.Name" xml:space="preserve">
+    <value>labelFileStreamPort</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamPort.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamPort.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelFileStreamHost.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFileStreamHost.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFileStreamHost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 68</value>
+  </data>
+  <data name="labelFileStreamHost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="labelFileStreamHost.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelFileStreamHost.Text" xml:space="preserve">
+    <value>Хост или IP-адрес:</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamHost.Name" xml:space="preserve">
+    <value>labelFileStreamHost</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamHost.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamHost.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;labelFileStreamHost.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBoxFileStreamHost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 65</value>
+  </data>
+  <data name="textBoxFileStreamHost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
+  </data>
+  <data name="textBoxFileStreamHost.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxFileStreamHost.Name" xml:space="preserve">
+    <value>textBoxFileStreamHost</value>
+  </data>
+  <data name="&gt;&gt;textBoxFileStreamHost.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFileStreamHost.Parent" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;textBoxFileStreamHost.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBoxFileStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 29</value>
+  </data>
+  <data name="groupBoxFileStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 121</value>
+  </data>
+  <data name="groupBoxFileStream.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFileStream.Name" xml:space="preserve">
+    <value>groupBoxFileStream</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFileStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFileStream.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFileStream.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>894, 592</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Тестер подключений</value>
+  </data>
+  <data name="&gt;&gt;toolTipTTL.Name" xml:space="preserve">
+    <value>toolTipTTL</value>
+  </data>
+  <data name="&gt;&gt;toolTipTTL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipDontFragment.Name" xml:space="preserve">
+    <value>toolTipDontFragment</value>
+  </data>
+  <data name="&gt;&gt;toolTipDontFragment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialogLog.Name" xml:space="preserve">
+    <value>saveFileDialogLog</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialogLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogNetworkLink.Name" xml:space="preserve">
+    <value>openFileDialogNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogNetworkLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
