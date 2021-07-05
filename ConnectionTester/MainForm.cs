@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ConnectionTester
 {
 	public partial class MainForm : Form
 	{
-		List<ITestController> controllers;
-		bool running = false;
+		private readonly TestControllersCollection controllers = new TestControllersCollection();
 
 		const string Sender = "Главное окно";
 
@@ -30,6 +28,15 @@ namespace ConnectionTester
 		{
 			buttonRunStop.Text = RunTest;
 
+			LoadConfiguration();
+
+			toolTipTTL.SetToolTip(numericUpDownTTL, "Получает или задает число узлов маршрутизации, которые могут переадресовывать пакет Ping, прежде чем он будет удален.");
+
+			toolTipDontFragment.SetToolTip(checkBoxDontFragment, "Установлена, если данные нельзя отправлять несколькими пакетами; в противном случае галка снята.");
+		}
+
+		private void LoadConfiguration()
+		{
 			var configuration = ConfigurationStorage.Load();
 
 			checkBoxNetwork.Checked = configuration.Ping.State;
@@ -41,6 +48,7 @@ namespace ConnectionTester
 			checkBoxNetworkLink.Checked = configuration.NetworkLink.State;
 			numericUpDownNetworkLinkFrequency.Value = configuration.NetworkLink.Frequency;
 			textBoxLinkFileName.Text = configuration.NetworkLink.FileName;
+			numericUpDownBatchSize.Value = configuration.NetworkLink.BatchSize;
 
 			checkBoxSqlServer.Checked = configuration.SqlServer.State;
 			textBoxServerAddress.Text = configuration.SqlServer.ServerAddress;
@@ -55,30 +63,30 @@ namespace ConnectionTester
 			numericUpDownFileStreamPort.Value = configuration.FileStream.Port;
 
 			textBoxLogFileName.Text = configuration.LogFileName;
-
-			toolTipTTL.SetToolTip(numericUpDownTTL, "Получает или задает число узлов маршрутизации, которые могут переадресовывать пакет Ping, прежде чем он будет удален.");
-
-			toolTipDontFragment.SetToolTip(checkBoxDontFragment, "Установлена, если данные нельзя отправлять несколькими пакетами; в противном случае галка снята.");
 		}
 
 		private void Prepare()
 		{
 			Logger.SetScreen(listBoxLog);
 
-			controllers = new List<ITestController>
-			{
+			controllers.Add(
 				new PingController(
 					checkBoxNetwork,
 					groupBoxNetwork,
 					textBoxHostOrIP,
 					numericUpDownPingTimeout,
 					numericUpDownTTL,
-					checkBoxDontFragment),
+					checkBoxDontFragment));
+
+			controllers.Add(
 				new NetworkLinkController(
 					checkBoxNetworkLink,
 					groupBoxNetworkLink,
 					numericUpDownNetworkLinkFrequency,
-					textBoxLinkFileName),
+					numericUpDownBatchSize,
+					textBoxLinkFileName));
+
+			controllers.Add(
 				new SqlServerController(
 					checkBoxSqlServer,
 					groupBoxSqlServer,
@@ -86,15 +94,16 @@ namespace ConnectionTester
 					textBoxLogin,
 					textBoxPassword,
 					textBoxDatabase,
-					numericUpDownSqlServerFrequency),
+					numericUpDownSqlServerFrequency));
+
+			controllers.Add(
 				new FileStreamController(
 					checkBoxFileStream,
 					groupBoxFileStream,
 					radioButtonServer,
 					radioButtonClient,
 					textBoxFileStreamHost,
-					numericUpDownFileStreamPort)
-			};
+					numericUpDownFileStreamPort));
 
 			foreach (var controller in controllers)
 				controller.Setup();
@@ -102,14 +111,10 @@ namespace ConnectionTester
 
 		private void buttonRunStop_Click(object sender, EventArgs e)
 		{
-			if (running)
-			{
+			if (controllers.Running)
 				Stop();
-
-				return;
-			}
-
-			Start();
+			else
+				Start();
 		}
 
 		private void buttonSetLogFile_Click(object sender, EventArgs e)
@@ -126,57 +131,39 @@ namespace ConnectionTester
 
 		private void Start()
 		{
-			if (running)
-				throw new InvalidOperationException(nameof(running));
+			if (controllers.Running)
+				throw new InvalidOperationException(nameof(controllers.Running));
 
-			Logger.StartRecord(textBoxLogFileName.Text);
-
-			Logger.Write(Sender, "Запуск тестирования...");
-
-			string errors = string.Empty;
-
-			foreach (var controller in controllers)
-				if (controller.Enabled)
-					if (!controller.Aviable(out string message))
-						errors += message + Environment.NewLine;
-
-			errors = errors.TrimEnd();
-
-			if (!string.IsNullOrWhiteSpace(errors))
+			if (controllers.HasAnyRunnedTest())
 			{
-				MessageBox.Show(errors, "Недостаточно данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Некоторые тесты всё ещё выполняются. Подождите немного и попробуйте ещё раз.", "Ожидание завершения задач", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 				return;
 			}
 
-			running = true;
+			buttonSetLogFile.Enabled = false;
+			textBoxLogFileName.Enabled = false;
+
+			if (!controllers.RunTest(Sender, textBoxLogFileName.Text.Trim()))
+				return;
 
 			buttonRunStop.Text = StopTest;
-
-			foreach (var controller in controllers)
-				if (controller.Enabled)
-					controller.Run();
 		}
 
 		private void Stop()
 		{
-			if (!running)
+			if (!controllers.Running)
 				return;
 
-			Logger.Write(Sender, "Остановка тестирования...");
-
-			foreach (var controller in controllers)
-				if (controller.Enabled)
-					controller.Stop();
-
-			running = false;
-
+			controllers.StopTest(Sender);
+			
 			buttonRunStop.Text = RunTest;
 
-			Logger.StopRecord();
+			buttonSetLogFile.Enabled = true;
+			textBoxLogFileName.Enabled = true;
 		}
 
-		private void SyncConfig()
+		private void SaveConfiguration()
 		{
 			var configuration = new ConfigurationStorage();
 
@@ -189,6 +176,7 @@ namespace ConnectionTester
 			configuration.NetworkLink.State = checkBoxNetworkLink.Checked;
 			configuration.NetworkLink.Frequency = (int)numericUpDownNetworkLinkFrequency.Value;
 			configuration.NetworkLink.FileName = textBoxLinkFileName.Text;
+			configuration.NetworkLink.BatchSize = (int)numericUpDownBatchSize.Value;
 
 			configuration.SqlServer.State = checkBoxSqlServer.Checked;
 			configuration.SqlServer.ServerAddress = textBoxServerAddress.Text;
@@ -211,7 +199,7 @@ namespace ConnectionTester
 		{
 			Stop();
 
-			SyncConfig();
+			SaveConfiguration();
 		}
 	}
 }

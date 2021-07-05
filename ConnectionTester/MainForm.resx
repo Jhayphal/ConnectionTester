@@ -123,14 +123,14 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBoxDontFragment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 89</value>
+    <value>228, 110</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="checkBoxDontFragment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="checkBoxDontFragment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
+    <value>169, 21</value>
   </data>
   <data name="checkBoxDontFragment.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -151,10 +151,13 @@
     <value>0</value>
   </data>
   <data name="numericUpDownTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 66</value>
+    <value>228, 81</value>
+  </data>
+  <data name="numericUpDownTTL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="numericUpDownTTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>133, 22</value>
   </data>
   <data name="numericUpDownTTL.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -175,13 +178,10 @@
     <value>True</value>
   </data>
   <data name="labelTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 67</value>
-  </data>
-  <data name="labelTTL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>8, 82</value>
   </data>
   <data name="labelTTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 13</value>
+    <value>204, 17</value>
   </data>
   <data name="labelTTL.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -202,10 +202,13 @@
     <value>2</value>
   </data>
   <data name="numericUpDownPingTimeout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 41</value>
+    <value>228, 50</value>
+  </data>
+  <data name="numericUpDownPingTimeout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="numericUpDownPingTimeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>133, 22</value>
   </data>
   <data name="numericUpDownPingTimeout.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -226,10 +229,13 @@
     <value>True</value>
   </data>
   <data name="labelNetworkFrequency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
+    <value>8, 53</value>
+  </data>
+  <data name="labelNetworkFrequency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelNetworkFrequency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 13</value>
+    <value>202, 17</value>
   </data>
   <data name="labelNetworkFrequency.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -253,10 +259,13 @@
     <value>True</value>
   </data>
   <data name="labelHostOrIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
+    <value>8, 27</value>
+  </data>
+  <data name="labelHostOrIP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelHostOrIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 13</value>
+    <value>131, 17</value>
   </data>
   <data name="labelHostOrIP.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -277,10 +286,13 @@
     <value>5</value>
   </data>
   <data name="textBoxHostOrIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 17</value>
+    <value>228, 21</value>
+  </data>
+  <data name="textBoxHostOrIP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxHostOrIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxHostOrIP.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -298,10 +310,16 @@
     <value>6</value>
   </data>
   <data name="groupBoxNetwork.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 29</value>
+    <value>16, 36</value>
+  </data>
+  <data name="groupBoxNetwork.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxNetwork.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxNetwork.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 121</value>
+    <value>569, 149</value>
   </data>
   <data name="groupBoxNetwork.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -322,10 +340,13 @@
     <value>True</value>
   </data>
   <data name="checkBoxNetwork.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>16, 15</value>
+  </data>
+  <data name="checkBoxNetwork.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxNetwork.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 17</value>
+    <value>210, 21</value>
   </data>
   <data name="checkBoxNetwork.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -346,10 +367,13 @@
     <value>11</value>
   </data>
   <data name="buttonRunStop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 323</value>
+    <value>616, 398</value>
+  </data>
+  <data name="buttonRunStop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="buttonRunStop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 23</value>
+    <value>557, 28</value>
   </data>
   <data name="buttonRunStop.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -376,10 +400,13 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxNetworkLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 163</value>
+    <value>616, 201</value>
+  </data>
+  <data name="checkBoxNetworkLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxNetworkLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 17</value>
+    <value>130, 21</value>
   </data>
   <data name="checkBoxNetworkLink.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -399,17 +426,74 @@
   <data name="&gt;&gt;checkBoxNetworkLink.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="numericUpDownBatchSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 80</value>
+  </data>
+  <data name="numericUpDownBatchSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="numericUpDownBatchSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="numericUpDownBatchSize.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownBatchSize.Name" xml:space="preserve">
+    <value>numericUpDownBatchSize</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownBatchSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownBatchSize.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownBatchSize.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelBatchSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelBatchSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelBatchSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 82</value>
+  </data>
+  <data name="labelBatchSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelBatchSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="labelBatchSize.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labelBatchSize.Text" xml:space="preserve">
+    <value>Сколько байт прочесть:</value>
+  </data>
+  <data name="&gt;&gt;labelBatchSize.Name" xml:space="preserve">
+    <value>labelBatchSize</value>
+  </data>
+  <data name="&gt;&gt;labelBatchSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelBatchSize.Parent" xml:space="preserve">
+    <value>groupBoxNetworkLink</value>
+  </data>
+  <data name="&gt;&gt;labelBatchSize.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="buttonLinkFileName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 42</value>
+    <value>507, 52</value>
   </data>
   <data name="buttonLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="buttonLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 18</value>
+    <value>32, 22</value>
   </data>
   <data name="buttonLinkFileName.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -427,19 +511,16 @@
     <value>groupBoxNetworkLink</value>
   </data>
   <data name="&gt;&gt;buttonLinkFileName.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="labelLinkFileName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labelLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="labelLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>8, 55</value>
   </data>
   <data name="labelLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 13</value>
+    <value>128, 17</value>
   </data>
   <data name="labelLinkFileName.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -457,16 +538,16 @@
     <value>groupBoxNetworkLink</value>
   </data>
   <data name="&gt;&gt;labelLinkFileName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="textBoxLinkFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 42</value>
+    <value>217, 52</value>
   </data>
   <data name="textBoxLinkFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="textBoxLinkFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 20</value>
+    <value>283, 22</value>
   </data>
   <data name="textBoxLinkFileName.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -481,13 +562,16 @@
     <value>groupBoxNetworkLink</value>
   </data>
   <data name="&gt;&gt;textBoxLinkFileName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="numericUpDownNetworkLinkFrequency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 19</value>
+    <value>217, 23</value>
+  </data>
+  <data name="numericUpDownNetworkLinkFrequency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="numericUpDownNetworkLinkFrequency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>133, 22</value>
   </data>
   <data name="numericUpDownNetworkLinkFrequency.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -502,16 +586,19 @@
     <value>groupBoxNetworkLink</value>
   </data>
   <data name="&gt;&gt;numericUpDownNetworkLinkFrequency.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="labelNetworkLinkFrequency.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labelNetworkLinkFrequency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
+    <value>8, 26</value>
+  </data>
+  <data name="labelNetworkLinkFrequency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelNetworkLinkFrequency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
+    <value>162, 17</value>
   </data>
   <data name="labelNetworkLinkFrequency.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -529,13 +616,19 @@
     <value>groupBoxNetworkLink</value>
   </data>
   <data name="&gt;&gt;labelNetworkLinkFrequency.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="groupBoxNetworkLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 180</value>
+    <value>616, 222</value>
+  </data>
+  <data name="groupBoxNetworkLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxNetworkLink.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxNetworkLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 80</value>
+    <value>557, 136</value>
   </data>
   <data name="groupBoxNetworkLink.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -556,10 +649,13 @@
     <value>True</value>
   </data>
   <data name="checkBoxSqlServer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 163</value>
+    <value>16, 201</value>
+  </data>
+  <data name="checkBoxSqlServer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxSqlServer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 17</value>
+    <value>206, 21</value>
   </data>
   <data name="checkBoxSqlServer.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -580,10 +676,13 @@
     <value>7</value>
   </data>
   <data name="numericUpDownSqlServerFrequency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 123</value>
+    <value>228, 151</value>
+  </data>
+  <data name="numericUpDownSqlServerFrequency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="numericUpDownSqlServerFrequency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>133, 22</value>
   </data>
   <data name="numericUpDownSqlServerFrequency.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -607,10 +706,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelSqlServerFrequency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 125</value>
+    <value>8, 154</value>
+  </data>
+  <data name="labelSqlServerFrequency.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelSqlServerFrequency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
+    <value>162, 17</value>
   </data>
   <data name="labelSqlServerFrequency.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -637,10 +739,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 100</value>
+    <value>8, 123</value>
+  </data>
+  <data name="labelDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
+    <value>96, 17</value>
   </data>
   <data name="labelDatabase.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -661,10 +766,13 @@
     <value>2</value>
   </data>
   <data name="textBoxDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 97</value>
+    <value>228, 119</value>
+  </data>
+  <data name="textBoxDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxDatabase.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -688,10 +796,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 74</value>
+    <value>8, 91</value>
+  </data>
+  <data name="labelPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>61, 17</value>
   </data>
   <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -712,10 +823,13 @@
     <value>4</value>
   </data>
   <data name="textBoxPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 71</value>
+    <value>228, 87</value>
+  </data>
+  <data name="textBoxPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxPassword.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -733,10 +847,13 @@
     <value>5</value>
   </data>
   <data name="textBoxLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 45</value>
+    <value>228, 55</value>
+  </data>
+  <data name="textBoxLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxLogin.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -760,10 +877,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 48</value>
+    <value>8, 59</value>
+  </data>
+  <data name="labelLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
+    <value>51, 17</value>
   </data>
   <data name="labelLogin.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -787,10 +907,13 @@
     <value>True</value>
   </data>
   <data name="labelServerAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 24</value>
+    <value>8, 30</value>
+  </data>
+  <data name="labelServerAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelServerAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
+    <value>110, 17</value>
   </data>
   <data name="labelServerAddress.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -811,10 +934,13 @@
     <value>8</value>
   </data>
   <data name="textBoxServerAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 19</value>
+    <value>228, 23</value>
+  </data>
+  <data name="textBoxServerAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxServerAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxServerAddress.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -832,10 +958,16 @@
     <value>9</value>
   </data>
   <data name="groupBoxSqlServer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 180</value>
+    <value>16, 222</value>
+  </data>
+  <data name="groupBoxSqlServer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxSqlServer.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxSqlServer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 165</value>
+    <value>569, 203</value>
   </data>
   <data name="groupBoxSqlServer.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -858,11 +990,17 @@
   <data name="listBoxLog.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="listBoxLog.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="listBoxLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 358</value>
+    <value>16, 441</value>
+  </data>
+  <data name="listBoxLog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="listBoxLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>868, 223</value>
+    <value>1157, 274</value>
   </data>
   <data name="listBoxLog.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -889,13 +1027,10 @@
     <value>True</value>
   </data>
   <data name="labelLogFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 279</value>
-  </data>
-  <data name="labelLogFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>624, 367</value>
   </data>
   <data name="labelLogFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
+    <value>64, 17</value>
   </data>
   <data name="labelLogFileName.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -934,13 +1069,13 @@
     <value>Использовать этот файл для чтения...</value>
   </data>
   <data name="textBoxLogFileName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>625, 276</value>
+    <value>833, 364</value>
   </data>
   <data name="textBoxLogFileName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="textBoxLogFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 20</value>
+    <value>283, 22</value>
   </data>
   <data name="textBoxLogFileName.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -961,13 +1096,13 @@
     <value>3</value>
   </data>
   <data name="buttonSetLogFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>842, 276</value>
+    <value>1123, 364</value>
   </data>
   <data name="buttonSetLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="buttonSetLogFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 18</value>
+    <value>32, 22</value>
   </data>
   <data name="buttonSetLogFile.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -994,16 +1129,19 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxFileStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 12</value>
+    <value>616, 15</value>
+  </data>
+  <data name="checkBoxFileStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="checkBoxFileStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 17</value>
+    <value>321, 21</value>
   </data>
   <data name="checkBoxFileStream.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="checkBoxFileStream.Text" xml:space="preserve">
-    <value>Сетевое соединение (FileStream)</value>
+    <value>Сетевое соединение (Потоковая передача)</value>
   </data>
   <data name="&gt;&gt;checkBoxFileStream.Name" xml:space="preserve">
     <value>checkBoxFileStream</value>
@@ -1021,13 +1159,13 @@
     <value>True</value>
   </data>
   <data name="radioButtonClient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 22</value>
+    <value>159, 27</value>
   </data>
   <data name="radioButtonClient.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="radioButtonClient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
+    <value>77, 21</value>
   </data>
   <data name="radioButtonClient.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1051,13 +1189,13 @@
     <value>True</value>
   </data>
   <data name="radioButtonServer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 22</value>
+    <value>347, 27</value>
   </data>
   <data name="radioButtonServer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="radioButtonServer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
+    <value>77, 21</value>
   </data>
   <data name="radioButtonServer.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1078,10 +1216,13 @@
     <value>1</value>
   </data>
   <data name="numericUpDownFileStreamPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 90</value>
+    <value>217, 111</value>
+  </data>
+  <data name="numericUpDownFileStreamPort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="numericUpDownFileStreamPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>133, 22</value>
   </data>
   <data name="numericUpDownFileStreamPort.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1105,10 +1246,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelFileStreamPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 89</value>
+    <value>8, 110</value>
+  </data>
+  <data name="labelFileStreamPort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelFileStreamPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>45, 17</value>
   </data>
   <data name="labelFileStreamPort.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1135,10 +1279,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelFileStreamHost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 68</value>
+    <value>8, 84</value>
+  </data>
+  <data name="labelFileStreamHost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="labelFileStreamHost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 13</value>
+    <value>131, 17</value>
   </data>
   <data name="labelFileStreamHost.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1159,10 +1306,13 @@
     <value>4</value>
   </data>
   <data name="textBoxFileStreamHost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 65</value>
+    <value>217, 80</value>
+  </data>
+  <data name="textBoxFileStreamHost.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="textBoxFileStreamHost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="textBoxFileStreamHost.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1180,10 +1330,16 @@
     <value>5</value>
   </data>
   <data name="groupBoxFileStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 29</value>
+    <value>616, 36</value>
+  </data>
+  <data name="groupBoxFileStream.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBoxFileStream.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBoxFileStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 121</value>
+    <value>557, 149</value>
   </data>
   <data name="groupBoxFileStream.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1204,10 +1360,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>894, 592</value>
+    <value>1192, 729</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

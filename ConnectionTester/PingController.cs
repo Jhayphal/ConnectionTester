@@ -7,33 +7,25 @@ using System.Windows.Forms;
 
 namespace ConnectionTester
 {
-	sealed class PingController : ITestController
+	sealed class PingController : TestController
 	{
-		public readonly CheckBox State;
-		public readonly GroupBox Box;
 		public readonly TextBox HostOrIP;
 		public readonly NumericUpDown Timeout;
 		public readonly NumericUpDown Ttl;
 		public readonly CheckBox DontFragment;
 
-		public bool Enabled
-		{
-			get => State.Checked;
-			set => State.Checked = value;
-		}
+		public override string Sender => "Ping";
 
-		public string Sender => "Ping";
+		public override bool Running => tokenSource != null;
 
 		private volatile CancellationTokenSource tokenSource;
 
-		public PingController(CheckBox state, GroupBox box, TextBox hostOrIP, NumericUpDown timeout, NumericUpDown ttl, CheckBox dontFragment)
+		public PingController(CheckBox state, GroupBox box, TextBox hostOrIP, NumericUpDown timeout, NumericUpDown ttl, CheckBox dontFragment) : base(state, box)
 		{
-			State = state;
-			Box = box;
-			HostOrIP = hostOrIP;
-			Timeout = timeout;
-			Ttl = ttl;
-			DontFragment = dontFragment;
+			HostOrIP = hostOrIP ?? throw new ArgumentNullException(nameof(hostOrIP));
+			Timeout = timeout ?? throw new ArgumentNullException(nameof(timeout));
+			Ttl = ttl ?? throw new ArgumentNullException(nameof(ttl));
+			DontFragment = dontFragment ?? throw new ArgumentNullException(nameof(dontFragment));
 
 			State.CheckedChanged += State_CheckedChanged;
 		}
@@ -43,13 +35,17 @@ namespace ConnectionTester
 			Box.Enabled = State.Checked;
 		}
 
-		public bool Run()
+		public override bool Run()
 		{
+			if (Running)
+				throw new InvalidOperationException(nameof(Running));
+
 			if (!Aviable(out string _))
 				return false;
 
-			State.Enabled = false;
-			Box.Enabled = false;
+			Logger.Write(Sender, "Запуск.");
+
+			SetControlsState(enabled: false);
 
 			tokenSource?.Cancel();
 
@@ -62,8 +58,6 @@ namespace ConnectionTester
 
 		private void Ping()
 		{
-			Logger.Write(Sender, "Запуск...");
-
 			string who = HostOrIP.Text.Trim();
 
 			Ping pingSender = new Ping();
@@ -76,7 +70,7 @@ namespace ConnectionTester
 
 			PingOptions options = new PingOptions(ttl, dontFragment);
 
-			Logger.Write(Sender, $"Параметры: хост - {who}, таймаут - {timeout}, время жизни - {ttl}, фрагментация - {(dontFragment ? "отключена" : "включена")}.");
+			Logger.Write(Sender, $"Запущено. Хост {who}. Таймаут {timeout}. Время жизни {ttl}. Фрагментация {(dontFragment ? "отключена" : "включена")}.");
 
 			while (!tokenSource.IsCancellationRequested)
 			{
@@ -95,7 +89,7 @@ namespace ConnectionTester
 				}
 			}
 
-			Logger.Write(Sender, "Остановлен.");
+			Logger.Write(Sender, "Остановлено.");
 
 			tokenSource = null;
 		}
@@ -107,7 +101,7 @@ namespace ConnectionTester
 			Logger.Write(Sender, message);
 		}
 
-		public void Setup()
+		public override void Setup()
 		{
 			Box.Enabled = State.Checked;
 
@@ -118,15 +112,17 @@ namespace ConnectionTester
 			Ttl.Maximum = 1024;
 		}
 
-		public void Stop()
+		public override void Stop()
 		{
+			if (!Running)
+				throw new InvalidOperationException(nameof(Running));
+
 			tokenSource?.Cancel();
 
-			State.Enabled = true;
-			Box.Enabled = State.Checked;
+			SetControlsState(enabled: true);
 		}
 
-		public bool Aviable(out string message)
+		public override bool Aviable(out string message)
 		{
 			if (string.IsNullOrWhiteSpace(HostOrIP.Text))
 			{

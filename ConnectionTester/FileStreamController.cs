@@ -8,35 +8,28 @@ using System.Windows.Forms;
 
 namespace ConnectionTester
 {
-	sealed class FileStreamController : ITestController
+	sealed class FileStreamController : TestController
 	{
-		public readonly CheckBox State;
-		public readonly GroupBox Box;
 		public readonly RadioButton Server;
 		public readonly RadioButton Client;
 		public readonly TextBox Host;
 		public readonly NumericUpDown Port;
 
-		public string Sender => "File stream";
+		public override string Sender => "Потоковая передача";
 
-		const int BatchSize = 1024;
+		public override bool Running => tokenSource != null; 
 
-		private CancellationTokenSource tokenSource;
+		const int BatchSize = 8;
 
-		public bool Enabled
+		private volatile CancellationTokenSource tokenSource;
+		private byte[] response = new byte[] { 0xFF, 0xFF, 0xFA, 0x01 };
+
+		public FileStreamController(CheckBox state, GroupBox box, RadioButton server, RadioButton client, TextBox host, NumericUpDown port) : base(state, box)
 		{
-			get => State.Checked;
-			set => State.Checked = value;
-		}
-
-		public FileStreamController(CheckBox state, GroupBox box, RadioButton server, RadioButton client, TextBox host, NumericUpDown port)
-		{
-			State = state;
-			Box = box;
-			Server = server;
-			Client = client;
-			Host = host;
-			Port = port;
+			Server = server ?? throw new ArgumentNullException(nameof(server));
+			Client = client ?? throw new ArgumentNullException(nameof(client));
+			Host = host ?? throw new ArgumentNullException(nameof(host));
+			Port = port ?? throw new ArgumentNullException(nameof(port));
 
 			State.CheckedChanged += State_CheckedChanged;
 			Client.CheckedChanged += Client_CheckedChanged;
@@ -52,7 +45,7 @@ namespace ConnectionTester
 			Box.Enabled = State.Checked;
 		}
 
-		public bool Aviable(out string message)
+		public override bool Aviable(out string message)
 		{
 			if (Client.Checked && string.IsNullOrWhiteSpace(Host.Text))
 			{
@@ -66,13 +59,15 @@ namespace ConnectionTester
 			return true;
 		}
 
-		public bool Run()
+		public override bool Run()
 		{
+			if (Running)
+				throw new InvalidOperationException(nameof(Running));
+
 			if (!Aviable(out string _))
 				return false;
 
-			State.Enabled = false;
-			Box.Enabled = false;
+			SetControlsState(enabled: false);
 
 			tokenSource?.Cancel();
 
@@ -101,11 +96,18 @@ namespace ConnectionTester
 			{
 				using (Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 				{
-					listenSocket.ReceiveTimeout = 1000;
+					listenSocket.SendTimeout = 120;
+					listenSocket.ReceiveTimeout = 120;
 					listenSocket.Bind(ipPoint);
 					listenSocket.Listen(10);
 
 					Logger.Write(Sender, "Сервер запущен. Ожидание подключений.");
+
+					var generator = new Random(DateTime.Now.Millisecond);
+
+					byte[] data = new byte[BatchSize];
+					var responseLength = response.Length;
+					var responseData = new byte[responseLength];
 
 					while (!tokenSource.IsCancellationRequested)
 					{
@@ -113,12 +115,37 @@ namespace ConnectionTester
 
 						Logger.Write(Sender, $"Подключен клиент {handler.RemoteEndPoint}.");
 
-						byte[] data = new byte[BatchSize];
-
 						while(handler.Connected)
 						{
-							if (handler.Available > 0)
-								handler.Receive(data);
+							generator.NextBytes(data);
+
+							try
+							{
+								var sended = handler.Send(data);
+
+								if (sended != data.Length)
+									Logger.Write(Sender, $"Отправлено {sended} из {data.Length} байт.");
+
+								var received = handler.Receive(responseData);
+
+								if (received != responseLength)
+									Logger.Write(Sender, $"Получено {received} из {responseLength} байт.");
+
+								else if (!(responseData[0] == response[0]
+									&& responseData[1] == response[1]
+									&& responseData[2] == response[2]
+									&& responseData[3] == response[3]))
+									Logger.Write(Sender, "Ответ клиента отличается от ожидаемого.");
+
+								Thread.Sleep(50);
+							}
+							catch(Exception e)
+							{
+								Logger.Write(Sender, e.Message);
+							}
+
+							if (tokenSource.IsCancellationRequested)
+								break;
 						}
 
 						Logger.Write(Sender, $"Клиент {handler.RemoteEndPoint} закрыл соединение.");
@@ -148,26 +175,31 @@ namespace ConnectionTester
 
 				using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 				{
-					socket.SendTimeout = 1000;
+					socket.SendTimeout = 120;
+					socket.ReceiveTimeout = 0;
 
 					socket.Connect(ipPoint);
 
 					Logger.Write(Sender, "Подключено.");
 
-					var generator = new Random(DateTime.Now.Millisecond);
-
 					byte[] data = new byte[BatchSize];
 
-					while (socket.Connected && !tokenSource.IsCancellationRequested)
-					{
-						generator.NextBytes(data);
+					var responseLength = response.Length;
+					var responseData = new byte[responseLength];
 
+					while (socket.Connected && !tokenSource.IsCancellationRequested)
+					{	
 						try
 						{
-							var sended = socket.Send(data);
+							var received = socket.Receive(data);
 
-							if (sended != BatchSize)
-								Logger.Write(Sender, $"Не удалось доставить пакет либо его часть. Отправлено {sended} из {BatchSize} байт.");
+							if (received != BatchSize)
+								Logger.Write(Sender, $"Не удалось получить пакет либо его часть. Получено {received} из {BatchSize} байт.");
+
+							var sended = socket.Send(response);
+
+							if (sended != responseLength)
+								Logger.Write(Sender, $"Отправлено {sended} из {responseLength} байт.");
 						}
 						catch(Exception e)
 						{
@@ -191,7 +223,7 @@ namespace ConnectionTester
 			}
 		}
 
-		public void Setup()
+		public override void Setup()
 		{
 			Box.Enabled = State.Checked;
 			Host.Enabled = Client.Checked;
@@ -200,12 +232,14 @@ namespace ConnectionTester
 			Port.Maximum = 65535;
 		}
 
-		public void Stop()
+		public override void Stop()
 		{
+			if (!Running)
+				throw new InvalidOperationException(nameof(Running));
+
 			tokenSource?.Cancel();
 
-			State.Enabled = true;
-			Box.Enabled = State.Checked;
+			SetControlsState(enabled: true);
 		}
 	}
 }

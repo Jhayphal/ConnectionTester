@@ -79,6 +79,7 @@ namespace ConnectionTester
 		public bool State { get; set; }
 		public int Frequency { get; set; } = 1000;
 		public string FileName { get; set; } = string.Empty;
+		public int BatchSize { get; set; } = 8096;
 	}
 
 	[Serializable]

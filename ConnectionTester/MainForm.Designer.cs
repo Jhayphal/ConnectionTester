@@ -76,6 +76,8 @@ namespace ConnectionTester
 			this.labelFileStreamPort = new System.Windows.Forms.Label();
 			this.labelFileStreamHost = new System.Windows.Forms.Label();
 			this.textBoxFileStreamHost = new System.Windows.Forms.TextBox();
+			this.numericUpDownBatchSize = new System.Windows.Forms.NumericUpDown();
+			this.labelBatchSize = new System.Windows.Forms.Label();
 			this.groupBoxNetwork.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownTTL)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownPingTimeout)).BeginInit();
@@ -85,6 +87,7 @@ namespace ConnectionTester
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownSqlServerFrequency)).BeginInit();
 			this.groupBoxFileStream.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownFileStreamPort)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownBatchSize)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBoxNetwork
@@ -189,6 +192,8 @@ namespace ConnectionTester
 			// 
 			// groupBoxNetworkLink
 			// 
+			this.groupBoxNetworkLink.Controls.Add(this.numericUpDownBatchSize);
+			this.groupBoxNetworkLink.Controls.Add(this.labelBatchSize);
 			this.groupBoxNetworkLink.Controls.Add(this.buttonLinkFileName);
 			this.groupBoxNetworkLink.Controls.Add(this.labelLinkFileName);
 			this.groupBoxNetworkLink.Controls.Add(this.textBoxLinkFileName);
@@ -435,6 +440,31 @@ namespace ConnectionTester
 			resources.ApplyResources(this.textBoxFileStreamHost, "textBoxFileStreamHost");
 			this.textBoxFileStreamHost.Name = "textBoxFileStreamHost";
 			// 
+			// numericUpDownBatchSize
+			// 
+			resources.ApplyResources(this.numericUpDownBatchSize, "numericUpDownBatchSize");
+			this.numericUpDownBatchSize.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.numericUpDownBatchSize.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.numericUpDownBatchSize.Name = "numericUpDownBatchSize";
+			this.numericUpDownBatchSize.Value = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+			// 
+			// labelBatchSize
+			// 
+			resources.ApplyResources(this.labelBatchSize, "labelBatchSize");
+			this.labelBatchSize.Name = "labelBatchSize";
+			// 
 			// MainForm
 			// 
 			resources.ApplyResources(this, "$this");
@@ -471,6 +501,7 @@ namespace ConnectionTester
 			this.groupBoxFileStream.ResumeLayout(false);
 			this.groupBoxFileStream.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownFileStreamPort)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownBatchSize)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -523,6 +554,8 @@ namespace ConnectionTester
 		private System.Windows.Forms.TextBox textBoxFileStreamHost;
 		private System.Windows.Forms.RadioButton radioButtonClient;
 		private System.Windows.Forms.RadioButton radioButtonServer;
+		private System.Windows.Forms.NumericUpDown numericUpDownBatchSize;
+		private System.Windows.Forms.Label labelBatchSize;
 	}
 }
 

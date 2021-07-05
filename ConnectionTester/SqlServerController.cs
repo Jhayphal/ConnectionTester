@@ -1,35 +1,30 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace ConnectionTester
 {
-	sealed class SqlServerController : ITestController
+	sealed class SqlServerController : TestController
 	{
-		public readonly CheckBox State;
-		public readonly GroupBox Box;
 		public readonly TextBox Server;
 		public readonly TextBox Login;
 		public readonly TextBox Password;
 		public readonly TextBox Database;
 		public readonly NumericUpDown Frequency;
 
-		public string Sender => "SQL";
+		public override string Sender => "SQL Server";
 
-		public bool Enabled
-		{
-			get => State.Checked;
-			set => State.Checked = value;
-		}
+		public override bool Running => timer != null;
 
-		public SqlServerController(CheckBox state, GroupBox box, TextBox server, TextBox login, TextBox password, TextBox database, NumericUpDown frequency)
+		private System.Timers.Timer timer;
+
+		public SqlServerController(CheckBox state, GroupBox box, TextBox server, TextBox login, TextBox password, TextBox database, NumericUpDown frequency) : base(state, box)
 		{
-			State = state;
-			Box = box;
-			Server = server;
-			Login = login;
-			Password = password;
-			Database = database;
-			Frequency = frequency;
+			Server = server ?? throw new ArgumentNullException(nameof(server));
+			Login = login ?? throw new ArgumentNullException(nameof(login));
+			Password = password ?? throw new ArgumentNullException(nameof(password));
+			Database = database ?? throw new ArgumentNullException(nameof(database));
+			Frequency = frequency ?? throw new ArgumentNullException(nameof(frequency));
 
 			State.CheckedChanged += State_CheckedChanged;
 		}
@@ -39,7 +34,7 @@ namespace ConnectionTester
 			Box.Enabled = State.Checked;
 		}
 
-		public bool Aviable(out string message)
+		public override bool Aviable(out string message)
 		{
 			message = string.Empty;
 
@@ -63,12 +58,77 @@ namespace ConnectionTester
 			return false;
 		}
 
-		public bool Run()
+		public override bool Run()
 		{
-			throw new NotImplementedException();
+			if (Running)
+				throw new InvalidOperationException(nameof(Running));
+
+			if (!Aviable(out string _))
+				return false;
+
+			SetControlsState(enabled: false);
+
+			Logger.Write(Sender, $"Запуск. Сервер: {Server.Text.Trim()}. База данных: {Database.Text.Trim()}.");
+
+			var frequency = (int)Frequency.Value;
+
+			timer = new System.Timers.Timer
+			{
+				Interval = frequency
+			};
+
+			timer.Elapsed += Timer_Elapsed;
+			timer.Start();
+
+			Logger.Write(Sender, "Запущено.");
+
+			return true;
 		}
 
-		public void Setup()
+		private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+		{
+			timer.Enabled = false;
+
+			try
+			{
+				SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
+				{
+					InitialCatalog = Database.Text.Trim(),
+					DataSource = Server.Text.Trim(),
+					IntegratedSecurity = false,
+					ConnectTimeout = (int)Frequency.Value,
+					UserID = Login.Text.Trim(),
+					Password = Password.Text.Trim()
+				};
+
+				using (SqlCommand request = new SqlCommand("SELECT 1"))
+				{
+					using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+					{
+						request.Connection = connection;
+
+						object value = request.ExecuteScalar();
+
+						if (value == null || value == DBNull.Value)
+							Logger.Write(Sender, "Не удалось получить значение.");
+
+						else if (!(value is int i))
+							Logger.Write(Sender, $"Тип ({value.GetType()}) полученного значения ({value}) отличается от ожидаемого (int).");
+
+						else if (i != 1)
+							Logger.Write(Sender, $"Полученный ответ {i} не совпадает с ожидаемым (1).");
+					}
+				}
+			}
+			catch(Exception ex)
+			{
+				Logger.Write(Sender, ex.Message);
+			}
+
+			timer.Enabled = true;
+		}
+
+		public override void Setup()
 		{
 			Box.Enabled = State.Checked;
 
@@ -78,9 +138,23 @@ namespace ConnectionTester
 			Frequency.Maximum = 10000;
 		}
 
-		public void Stop()
+		public override void Stop()
 		{
-			throw new NotImplementedException();
+			if (!Running)
+				throw new InvalidOperationException(nameof(Running));
+
+			if (timer != null)
+			{
+				timer.Stop();
+				timer.Elapsed -= Timer_Elapsed;
+				timer.Dispose();
+
+				timer = null;
+			}
+
+			SetControlsState(enabled: true);
+
+			Logger.Write(Sender, $"Остановлено.");
 		}
 	}
 }
