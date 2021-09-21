@@ -17,7 +17,7 @@ namespace ConnectionTester
 
 		public override string Sender => "Потоковая передача";
 
-		public override bool Running => tokenSource != null; 
+		public override bool Running => tokenSource != null || (listenSocket?.Connected ?? false); 
 
 		const int BatchSize = 8;
 
@@ -37,7 +37,13 @@ namespace ConnectionTester
 
 		private void Client_CheckedChanged(object sender, EventArgs e)
 		{
-			Host.Enabled = Client.Checked;
+			if (!Client.Checked && string.IsNullOrWhiteSpace(Host.Text))
+			{
+				var host = Dns.GetHostName();
+				var ips = Dns.GetHostAddresses(host);
+				var currentIp = ips.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+				Host.Text = currentIp.ToString();
+			}
 		}
 
 		private void State_CheckedChanged(object sender, EventArgs e)
@@ -81,12 +87,12 @@ namespace ConnectionTester
 			return true;
 		}
 
-		private void StartServer()
+		Socket listenSocket;
+
+		private async Task StartServer()
 		{
 			var port = (int)Port.Value;
-			var host = Dns.GetHostName();
-			var ips = Dns.GetHostAddresses(host);
-			var currentIp = ips.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+			var currentIp = GetIpByHostName(Host.Text);
 
 			IPEndPoint ipPoint = new IPEndPoint(currentIp, port);
 
@@ -94,7 +100,7 @@ namespace ConnectionTester
 
 			try
 			{
-				using (Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+				using (listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 				{
 					listenSocket.SendTimeout = 120;
 					listenSocket.ReceiveTimeout = 120;
@@ -111,7 +117,9 @@ namespace ConnectionTester
 
 					while (!tokenSource.IsCancellationRequested)
 					{
-						Socket handler = listenSocket.Accept();
+						var args = new SocketAsyncEventArgs();
+						
+						Socket handler = await listenSocket.AcceptAsync();
 
 						Logger.Write(Sender, $"Подключен клиент {handler.RemoteEndPoint}.");
 
@@ -121,10 +129,16 @@ namespace ConnectionTester
 
 							try
 							{
+								if (tokenSource.IsCancellationRequested)
+									break;
+
 								var sended = handler.Send(data);
 
 								if (sended != data.Length)
 									Logger.Write(Sender, $"Отправлено {sended} из {data.Length} байт.");
+
+								if (tokenSource.IsCancellationRequested)
+									break;
 
 								var received = handler.Receive(responseData);
 
@@ -162,6 +176,19 @@ namespace ConnectionTester
 			}
 		}
 
+		private IPAddress GetIpByHostName(string host)
+		{
+			if (string.IsNullOrWhiteSpace(host))
+				host = Dns.GetHostName();
+
+			else if (IPAddress.TryParse(host, out var ip))
+				return ip;
+
+			var ips = Dns.GetHostAddresses(host);
+			
+			return ips.LastOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+		}
+
 		private void ConnectToHost()
 		{
 			try
@@ -171,12 +198,24 @@ namespace ConnectionTester
 
 				Logger.Write(Sender, $"Подключение к серверу {host}:{port}.");
 
-				IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse(host), port);
+				if (!IPAddress.TryParse(host, out var ip))
+				{
+					ip = GetIpByHostName(host);
+
+					if (ip == null)
+					{
+						Logger.Write(Sender, "Не удалось определить ip-адресс сервера. Укажите его вручную.");
+
+						return;
+					}
+				}
+
+				IPEndPoint ipPoint = new IPEndPoint(ip, port);
 
 				using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
 				{
 					socket.SendTimeout = 120;
-					socket.ReceiveTimeout = 0;
+					socket.ReceiveTimeout = 70;
 
 					socket.Connect(ipPoint);
 
@@ -201,13 +240,15 @@ namespace ConnectionTester
 							if (sended != responseLength)
 								Logger.Write(Sender, $"Отправлено {sended} из {responseLength} байт.");
 						}
+						catch(SocketException e)
+						{
+							Logger.Write(Sender, e.Message + "; Код ошибки " + e.ErrorCode.ToString());
+						}
 						catch(Exception e)
 						{
 							Logger.Write(Sender, e.Message);
 						}
 					}
-
-					tokenSource = null;
 
 					socket.Shutdown(SocketShutdown.Both);
 					socket.Disconnect(reuseSocket: false);
@@ -220,13 +261,15 @@ namespace ConnectionTester
 			finally
 			{
 				Logger.Write(Sender, "Соединение закрыто.");
+
+				tokenSource = null;
 			}
 		}
 
 		public override void Setup()
 		{
 			Box.Enabled = State.Checked;
-			Host.Enabled = Client.Checked;
+			Host.Enabled = true; // Client.Checked;
 
 			Port.Minimum = 1024;
 			Port.Maximum = 65535;
@@ -237,7 +280,13 @@ namespace ConnectionTester
 			if (!Running)
 				throw new InvalidOperationException(nameof(Running));
 
-			tokenSource?.Cancel();
+			listenSocket?.Dispose();
+
+			if (tokenSource != null)
+			{
+				tokenSource.Cancel();
+				tokenSource = null;
+			}
 
 			SetControlsState(enabled: true);
 		}
